@@ -1,0 +1,41 @@
+{
+  "name": "rs-browser",
+  "version": "1.0.4",
+  "description": "check browser version",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "rm -rf ./lib && babel src --out-dir lib",
+    "buildtest": "babel test/*.es --out-dir .",
+    "pub": "npm run build && npm publish && rm -rf lib",
+    "unpub": "npm unpublish .",
+    "test": "mocha --compilers js:babel-core/register 'test/**/*.@(js|jsx)' "
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@code.core.rs.com:Public/p-f2e-business.git"
+  },
+  "author": {
+    "name": "hao.zhang",
+    "email": "mzhanghaom@126.com",
+    "url": ""
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
+    "babel-plugin-transform-remove-console": "^6.8.3",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "sinon": "^2.1.0"
+  },
+  "dependencies": {
+    "amfe-env": "^2.0.0"
+  }
+}
